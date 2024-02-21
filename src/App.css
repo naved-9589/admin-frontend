@@ -1,38 +1,822 @@
-.App {
+
+/*            header start  */
+
+body{
+  background-color: #f4f6f9 !important;
+}
+
+.headerimage{
+   width: 29px;
+   border-radius: 50%;
+}
+
+.headerright{
+  padding: 0px 10px;
+}
+
+.header{
+    
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 5;
+}
+
+.innerheader{
+  background-color: #ffffff;
+  padding: 5px 0px;
+}
+
+
+.headerright svg{
+  font-size: 20px;
+}
+
+.hamburger{
+  cursor: pointer;
+}
+
+
+/*          header ends  */
+
+/*           leftmenu start */
+
+li{
+  list-style: none;
+  margin: 31px 0px;
+}
+
+ul{
+  padding: 0 !important;
+}
+
+.leftmenuwidth{
+  display: grid;
+  width: 19%;
+  overflow: hidden;
+}
+
+.leftmenuwidthdecrease{
+   width: 4.5% !important;
+}
+
+.rightcontentwidth{
+    width: 81%;
+}
+
+.rightcontentwidthincrease{
+   width: 95.5%;
+}
+
+.maincontent{
+  margin-top: 56px;
+
+}
+
+.leftmenu{
+  position: fixed;
+  width: 19%;
+  background: #242a33;
+  overflow-y: scroll;
+  height: 100%;
+  color: #ffffff;
+}
+
+.leftmenuincrease{
+  position: fixed;
+  display: grid;
+  background-color: #242a33;
+  width: 4.5% !important;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 100%;
+  color: #ffffff;
+}
+
+.sidetop{
+  padding: 20px;
+  border-bottom: 1px solid #ffffff1a;
+}
+
+.usertext{
+  opacity: .75;
+  margin-left: 20px;
+}
+
+
+.menumiddle{
+   padding: 10px 20px;
+}
+
+
+.dropdownlistbutton{
+  padding: 0;
+  background: none;
+  color: #ffffff91;
+  border: 0;
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.dropdownitems{
+   margin-left: 45px;
+}
+
+.menuicons{
+  font-size: 20px;
+}
+
+.hide{
+  display: none;
+}
+.drop{
+  display: block;
+}
+.dropdownlistbutton:hover button{
+  color: #ffffff;
+}
+
+a{
+  color: #ffffff91 !important;
+  text-decoration: none !important;
+}
+
+.active{
+  color: #ffffff !important;
+}
+
+/*      leftmenu ends */
+/*       analytic start */
+
+
+.boxxes{
+  position: relative;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0px 8px 18px #0000000d;
+}
+
+.boxxh2{
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.boxxes::before{
+  content: "";
+  height: 25px;
+  width: 2px;
+  background-color: #2842ffb8;
+  position: absolute;
+  top: 40%;
+  left: 0;
+}
+
+.chartleft{
+  box-shadow: 0px 8px 18px #0000000d;
+  position: relative;
+  border-radius: 5px;
+}
+
+.chartleft::before{
+  content: "";
+  height: 25px;
+  width: 2px;
+  background-color: #2842ffb8;
+  position: absolute;
+  top: 5%;
+  left: 0;
+}
+
+.topchartleft{
+  background-color: #ffffff;
+  padding: 20px;
+}
+
+.middlechartleft{
+  background-color: #2050ff9e;
+}
+
+.middlechartleft h5{
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.middlechartleft h6{
+  font-weight: 400;
+  color: #ffffff;
+}
+
+
+.bottomchartleft{
+  background-color: #ffffff;
+  padding: 20px;
+}
+
+
+.chartright{
+  box-shadow: 0px 8px 18px #0000000d;
+  padding: 20px;
+  position: relative;
+  background-color: #ffffff;
+}
+
+.chartright::before{
+  content: "";
+  height: 25px;
+  width: 2px;
+  background-color: #2842ffb8;
+  position: absolute;
+  top: 5%;
+  left: 0;
+}
+
+.middlechartright{
+    width: 220px;
+    margin: 40px auto;
+}
+
+.rightbottomlabels{
+  padding: 10px;
+  border-bottom: 1px solid #9f949429;
+}
+
+
+
+
+
+::-webkit-scrollbar{
+   width: 5px;
+}
+
+::-webkit-scrollbar-thumb{
+  border-radius: 10px;
+   background: rgb(119, 115, 115);
+}
+
+
+
+/*       analytic ends */
+/*         notes start        */
+
+
+.innernotes{
+  padding: 20px;
+  border-radius: 5px;
+  background: #ffffff;
+  box-shadow: 0px 0px 20px #cdc9c97a;
+  max-width: 100%;
+  margin: auto !important;
+}
+
+.notesleftmain{
+  height: 100%;
+}
+
+.notessearch{
+  width: 100%;
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+  padding: 4px;
+
+}
+
+
+.addnotebutton{
+  background-color: #05b785bf;
+  border: none;
+  color: #ffffff;
+  border-radius: 5px;
+}
+
+textarea{
+  width: 100%;
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+  resize: none !important;
+  padding: 10px;
+}
+
+.noteslefttop{
+  padding: 11px;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.notesrighttop{
+  border-bottom: 1px solid #dee2e6;
+  padding: 10px;
+}
+
+.leftnotes{
+  border: 1px solid #dee2e6;
+  border-right: none;
+}
+
+.rightnotes{
+  border: 1px solid #dee2e6;
+}
+
+.notesrightbottom{
+  padding: 20px;
+}
+
+.noteheading{
+  font-weight: 400;
+  color: #8c97a3;
+}
+
+.notesrightcolorselection{
+  padding: 0px 20px 0px 20px;
+}
+
+.notesleftbottom{
+  height: 280px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+
+.colorbutton{
+  height: 20px;
+  width: 20px;
+}
+
+
+.b1{
+  background-color: #2623f0ee !important;
+}
+
+.b2{
+  background-color: #4fe176f8  !important;
+}
+.b3{
+  background-color: #ff2020f8  !important;
+}
+.b4{
+  background-color: #f183b6 !important;
+}
+.b5{
+  background-color: #ff6a00a6 !important;
+}
+
+.notedeletebutton{
+  border: none;
+  color: #ffffff;
+  background: #ff1b1bb0;
+  border-radius: 10px;
+  padding: 0px 10px;
+  font-weight: 200;
+}
+
+.deletebuttonmain{
+  width: max-content;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+}
+.deletebuttonmain:hover .notedeletebutton{
+  box-shadow: 0px 0px 10px #b7b2b2;
+  background-color: #ff1010;
+}
+
+.notescard{
+  border-bottom: 1px solid #dee2e6;
+  position: relative;
+  cursor: pointer;
+}
+
+.cardcolor{
+    position: absolute;
+    width: 5px;
+    display: block;
+    bottom: 0;
+    top: 0;
+    height: 100%;
+}
+
+.cardcontent{
+    text-overflow: ellipsis;
+    width: 235px;
+    text-wrap: nowrap;
+    overflow: hidden;
+}
+
+.updatenote{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px #bdbdbd96;
+  width: 50%;
+}
+
+.popcut{
+      background-color: rgba(250, 63, 63, 0.774);
+      border: none;
+      color: #ffffff;
+      border-radius: 28px;
+      height: 25px;
+      display: flex;
+      width: 25px;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 2px;
+}
+
+.updateinput{
+   width: 100%;
+}
+
+@keyframes spin{
+  0%{transform: rotate(0deg); }
+  100%{transform: rotate(360deg);}
+}
+
+.loader{
+    border: 5px solid #f7f4f4;
+    border-radius: 50%;
+    border-top: 5px solid #3498db;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+    position: fixed;
+    top: 50%;
+    right: 50%;
+}
+
+.success{
+  background: white;
+  width: 29%;
+  margin: auto;
+  position: fixed;
+  padding: 50px 100px;
   text-align: center;
+  color: #54d754;
+  font-size: 20px;
+  font-weight: 600;
+  box-shadow: 0px 0px 15px #c7c2c29e;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  z-index: 100;
+  border-radius: 10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+/*         notes ends        */
+/*         contact start        */
+
+
+.contactboxxes{
+  background-color: #ffffff;
+  padding: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.boxtop{
+  padding: 10px 0px;
+  border-bottom: 1px solid #00000024;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.contactborder{
+  border: 1px solid #00000024;
+}
+
+.boxrigthborder{
+  border-right: 1px solid #00000024;
+  height: 290px;
+  overflow-y: scroll;
+}
+
+.boxdata{
+  padding: 10px;
+}
+
+.commonwidth{
+  width: 33.3333%;
+}
+
+.contactsearch{
+  border: 1px solid #00000024;
+  border-radius: 5px;
+  padding: 5px;
+  width: 90%;
+}
+
+.filterbutton{
+    width: 100%;
+    background: none;
+    border: none;
+    text-align: left;
+    padding: 11px 10px;
+}
+
+
+.contactimage{
+  width: 50px;
+  border-radius: 50%;
+}
+
+.addcontactbutton{
+    background: #f70e09;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    color: #ffffff;
+    padding: 5px 20px;
+}
+
+.editheight{
+  height: 290px;
+  overflow-y: scroll;
+}
+
+
+table{
+  width: 100%;
+}
+
+td{
+  padding: 18px 0px;
+}
+
+.exacttable{
+  width: 95px;
+}
+
+.editbutton{
+  background: #745af2;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 20px;
+  color: #ffffff;
+}
+
+.editbutton:hover{
+  background:  #4b2ce7 !important;
+}
+
+
+
+.addcontact{
+  position: fixed;
+  border-radius: 10px;
+  background-color: #ffffff;
+  width: 40%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.topadd{
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #00000024;
+}
+
+
+.finaladdbutton{
+    background: #8484eb;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 20px;
+}
+
+
+.addmiddle{
+  padding: 20px;
+  border-bottom: 1px solid #00000024;
+}
+
+.addcontactimage{
+  width: 110px;
+  border-radius: 50%;
+}
+
+.inputbox{
+  padding: 10px 0px;
+}
+
+.inputbox input{
+  border: 1px solid #00000024;
+  border-radius: 5px;
+}
+
+
+.editsavebutton{
+    border: none;
+    background: #36c536;
+    color: #ffffff;
+    border-radius: 5px;
+    padding: 5px 20px;
+}
+
+.listbutton{
+  position: absolute;
+  top: 40%;
+  right: 0;
+}
+
+.listmain{
+  position: relative;
+}
+
+.contactoneclick{
+  cursor: pointer;
+}
+
+/*         contact ends        */
+/*         casl start        */
+
+
+.caslmain{
+  background-color: #ffffff;
+}
+
+.casltop{
+  padding: 10px 20px;
+  border-bottom: 1px solid #00000024;
+}
+
+.caslmiddle{
+  padding: 20px 20px;
+
+}
+
+.casl1{
+    background: none;
+    color: #2323f3;
+    border: 1px solid #2323f3;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding: 5px 10px;
+}
+
+.casl2{
+  background: none;
+  color: #2323f3;
+  border: none;
+  border-top: 1px solid #2323f3 ;
+  border-bottom: 1px solid #2323f3;
+  padding: 5px 10px;
+}
+
+.casl3{
+  background: none;
+  border: 1px solid #2323f3;
+  color: #2323f3;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 5px 10px;
+}
+
+.casladdbutton{
+    background: #37cf89;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    padding: 5px 20px;
+}
+
+.useraddwindow{
+    width: 20%;
+    padding: 20px;
+    background: #e8e7eb;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.caslsavebutton{
+    background: #476acf;
+    border: none;
+    color: #ffffff;
+    padding: 5px 20px;
+    border-radius: 5px;
+}
+
+.caslclose{
+  cursor: pointer;
+  float: right;
+}
+
+.userlist{
+  padding: 10px;
+  margin: 0;
+  border-bottom: 1px solid #00000024;
+}
+
+.caslbottom{
+  margin: 10px;
+  border: 1px solid #00000024;
+  border-radius: 10px;
+}
+
+
+/*         casl ends        */
+/*         shop start        */
+
+
+.shopmain{
+    padding: 20px;
+    background: #ffffff;
+}
+
+.shopmaininner{
+  border: 1px solid #00000024;
+}
+
+.shopleft{
+  border-right: 1px solid #00000024;
+}
+
+.radios{
+  margin: 10px 0px;
+}
+
+.addproduct{
+    background: none;
+    border: none;
+    background: #00b300;
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.addproducts{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 23px;
+  background: #e5e5e5eb;
+}
+
+.addproductfields{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.productaddbutton{
+    border: none;
+    background: #51bf51;
+    color: #ffffff;
+    padding: 5px 20px;
+    border-radius: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.productimages{
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
 }
+
+/*         shop ends        */
+/*          ticket start       */
+
+
+.innerticket{
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+}
+
+.ticketcard{
+    text-align: center;
+    padding: 20px;
+    color: #ffffff;
+    border-radius: 10px;
+    width: 25%;
+    margin: 0px 10px;
+}
+
+.ticketlist{
+  border-bottom: 1px solid #00000024;
+}
+
+.addticketwindow{
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: #cacadb;
+    padding: 20px;
+    color: #ffffff;
+    transform: translate(-50%, -50%);
+}
+
+.ticketdelete{
+  cursor: pointer;
+}
+
+
+/*           ticket ends   */
