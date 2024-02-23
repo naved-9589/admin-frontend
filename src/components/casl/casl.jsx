@@ -28,7 +28,7 @@ const Casl = () => {
   const fetchaluser = async()=>{
       try {
         
-        const secondresp = await fetch("https://admin-dashboard-iiwz.onrender.com?role="+searchrole+"")
+        const secondresp = await fetch("https://admin-dashboard-iiwz.onrender.com/getusers?role="+searchrole+"")
         const finaldata = await secondresp.json();
         setuserlist(finaldata);
         console.log(finaldata);
@@ -41,7 +41,7 @@ const Casl = () => {
   const saveuserdata = async()=>{
     try {
       
-    const resp = await fetch("http://localhost:1000/adduser", {
+    const resp = await fetch("https://admin-dashboard-iiwz.onrender.com/adduser", {
         method: "POST",
           headers:{
               'Accept': 'application/json',

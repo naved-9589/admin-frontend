@@ -12,6 +12,8 @@ import Contact from './components/contact/contact';
 import Casl from './components/casl/casl';
 import Shop from './components/shop/shop';
 import Ticket from './components/ticket/ticket';
+import Login from './components/login/login';
+import { useSelector } from 'react-redux';
 
 let exportappfunction = ()=>{
 
@@ -20,13 +22,18 @@ let exportappfunction = ()=>{
 
 function App() {
 
-  const [width, setwidth] = useState(true);
 
+  const [width, setwidth] = useState(true);
+   
+  const loginstate = useSelector((state) => state.auth.user)
+console.log(loginstate)
    exportappfunction = ()=>{
       setwidth(!width);
       console.log(width)
    }
-
+if(!loginstate){
+   return <Login/>
+}
 
   return (
     <>
@@ -47,6 +54,7 @@ function App() {
                     <Route path="/casl" element={<Casl/>} />
                     <Route path="/shop" element={<Shop/>} />
                     <Route path="/ticket" element={<Ticket/>} />
+                    <Route path="/login" element={<Login/>} />
                   </Routes>
                 </div>
               </div>
