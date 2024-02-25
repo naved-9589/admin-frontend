@@ -54,8 +54,9 @@ const Casl = () => {
 
       const data = await resp.json();
       if(data == "success"){
-        fetchaluser();
         setshowusepage(false);
+        fetchaluser();
+        
       }
 
     } catch (error) {
@@ -117,7 +118,7 @@ const Casl = () => {
               <select onChange={handlechange}>
                 <option>select</option>
                 <option value="admin">admin</option>
-                <option value="manager">manages</option>
+                <option value="manager">manager</option>
                 <option value="subscriber">subscriber</option>
               </select>
             </div>
