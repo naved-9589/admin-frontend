@@ -55,6 +55,7 @@ const Casl = () => {
       const data = await resp.json();
       if(data == "success"){
         fetchaluser();
+        setshowusepage(false);
       }
 
     } catch (error) {
