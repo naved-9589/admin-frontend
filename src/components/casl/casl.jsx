@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
+import { IoCloseOutline } from "react-icons/io5";
 
 const Casl = () => {
 
@@ -102,7 +103,7 @@ const Casl = () => {
        {
         showuserpage == true ?
         <div className="useraddwindow">
-        <h5>Add User <span onClick={()=> setshowusepage(false)} className="caslclose">+</span></h5>
+        <h5>Add User <span onClick={()=> setshowusepage(false)} className="caslclose"><IoCloseOutline/></span></h5>
         
           <div className="useraddwindowinner">
             <div className="mt-4 mb-2">

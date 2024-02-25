@@ -86,7 +86,7 @@ const Shop = () => {
                                                 <div className="col-lg-4">
                                                     <div className="productcard">
                                                         <div>
-                                                            <img className="productimages" src={`http://localhost:1000/${curr.image}`} />
+                                                            <img className="productimages" src={`https://admin-dashboard-iiwz.onrender.com/${curr.image}`} />
                                                         </div>
                                                         <div>
                                                             <p className="mt-2 mb-0 fw-lighter">{curr.catogary} shop</p>

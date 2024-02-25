@@ -1,9 +1,10 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import { useDispatch } from 'react-redux';
 import { userlogin } from '../../redux/slices/authslice';
 
 const Login = () => {
 
+    const [loader, setloader] = useState(false);
 
     const username = useRef();
     const password = useRef();
@@ -13,12 +14,14 @@ const Login = () => {
  const handlesubmit = (e)=>{
     e.preventDefault();
     dispatch(userlogin(username.current.value, password.current.value));
+    setloader(true);
     console.log(username.current.value)
 
  }
 
     return (
         <div className="login">
+            <div style={{ display: loader == true ? "block" : "none" }} className="loader"></div>
             <div className="innerlogin">
                 <section class="h-100 gradient-form">
                     <div class=" py-5 h-100">
@@ -39,12 +42,12 @@ const Login = () => {
 
                                                     <div class="form-outline mb-4">
                                                         <input type="text" id="form2Example11" class="form-control"
-                                                            placeholder="Phone number or email address" ref={username}/>
+                                                            placeholder="Phone number or email address" ref={username} value="naved9589"/>
                                                         <label class="form-label" for="form2Example11">Username</label>
                                                     </div>
 
                                                     <div class="form-outline mb-4">
-                                                        <input type="password" id="form2Example22" class="form-control" ref={password}/>
+                                                        <input type="password" id="form2Example22" class="form-control" ref={password} value="naved9589157798"/>
                                                         <label class="form-label" for="form2Example22">Password</label>
                                                     </div>
 

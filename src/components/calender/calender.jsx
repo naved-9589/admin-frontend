@@ -20,7 +20,7 @@ const Calender = () => {
     const fetchevents = async()=>{
       try {
       
-        const resp = await fetch("http://localhost:1000/fetchcalender")
+        const resp = await fetch("https://admin-dashboard-iiwz.onrender.com/fetchcalender")
          const data = await resp.json();
          setEventsData(data);
       } catch (error) {
@@ -36,7 +36,7 @@ const Calender = () => {
     const addcalenderevent = async(start, end, title)=>{
           try {
             
-            const resp = await fetch("http://localhost:1000/adcalenderevent", {
+            const resp = await fetch("https://admin-dashboard-iiwz.onrender.com/adcalenderevent", {
               method: "POST",
               headers:{
                 'Accept': 'application/json',

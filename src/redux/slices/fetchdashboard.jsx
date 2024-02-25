@@ -120,13 +120,13 @@ export  function deletenote(id){
                 },
                     body: JSON.stringify({id})
        })
-        
+        const finaldata = await data.json();
         const gettingstate = getstate();
-   
+   console.log(finaldata)
         const newstate = gettingstate.note.data.filter((curr)=>{
              return curr._id !== id
         })
-      
+            console.log("filtered")
           dispatch(updatenote(newstate));
 
          } catch (error) {

@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react'
+import { IoCloseOutline } from "react-icons/io5";
 import FormData from "form-data";
 import { useDispatch } from 'react-redux';
 import { changetoggle } from '../../redux/slices/productslice';
@@ -7,6 +8,8 @@ const Addproduct = () => {
 
     const [catogary, setcatogary] = useState();
     const [file, setfile] = useState();
+
+    const [loader, setloader] = useState(false)
 
     const dispatch = useDispatch();
 
@@ -28,6 +31,7 @@ const Addproduct = () => {
     
    const handlesubmit = async(e)=>{
     e.preventDefault();
+    setloader(true);
    let formdata = new FormData();
  
     formdata.append("image", file);
@@ -43,6 +47,7 @@ const Addproduct = () => {
     })
      const data = await resp.json();
     if(data == "success"){
+        setloader(false)
         dispatch(changetoggle(false))
     }
 
@@ -51,8 +56,12 @@ const Addproduct = () => {
 
   return (
     <div className="addproducts">
+         <div style={{ display: loader == true ? "block" : "none" }} className="loader"></div>
        <div className="addproductinner">
             <div className="addproductfields">
+                <div className="text-end">
+                    <IoCloseOutline className="fs-4" style={{ color: "#ff003b", cursor: "pointer" }} onClick={()=>{ dispatch(changetoggle(false)) }}/>
+                </div>
                 <div className="mt-2 mb-2">
                     <p className="m-0">Name</p>
                     <input type="text" ref={name}/>

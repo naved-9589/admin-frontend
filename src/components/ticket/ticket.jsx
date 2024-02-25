@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { RiDeleteBin6Line } from "react-icons/ri";
 
+import { IoCloseOutline } from "react-icons/io5";
+
 
 const Ticket = () => {
  
@@ -154,6 +156,9 @@ const Ticket = () => {
         {
             showaddticketwindow == true ?
             <div className="addticketwindow">
+                <div className="text-end">
+                  <IoCloseOutline onClick={()=>{ setshowaddticketwindow(false) }} style={{ cursor: "pointer" }}/>
+                 </div>  
                 <div className="addticketwindowinner">
                     <h5>Raise Ticket</h5>
                     <div>

@@ -446,6 +446,7 @@ textarea{
     position: fixed;
     top: 50%;
     right: 50%;
+    z-index: 100;
 }
 
 .success{
@@ -563,13 +564,15 @@ td{
 
 
 .addcontact{
-  position: fixed;
+  position: absolute;
   border-radius: 10px;
   background-color: #ffffff;
   width: 40%;
-  top: 50%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 10;
+  box-shadow: 0px 0px 10px #d1cbcb;
 }
 
 .topadd{

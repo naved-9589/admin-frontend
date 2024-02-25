@@ -34,6 +34,7 @@ export function addcontacts(fname, lname, company, email, notes, dipartment, pho
                 }) 
                 const data = await resp.json();
                 dispatch(setdata(data));
+                dispatch(changetoggle(false));
              } catch (error) {
                 console.log(error)
              }
